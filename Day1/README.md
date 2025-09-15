@@ -64,5 +64,6 @@ cd ~/
 git clone https://github.com/tektutor/terraform-sep-2025.git
 cd terraform-sep-2025
 git pull
+tree
 ```
 
