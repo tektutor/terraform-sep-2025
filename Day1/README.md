@@ -138,3 +138,14 @@ ansible -i inventory ubuntu1 -m setup | grep ansible_os_family
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/561b1885-aa2b-4c87-830f-9ee289388993" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8016d321-3792-40a9-88c8-09d3ed8ac3de" />
+
+## Lab - Ping playbook
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day1/ansible
+cat inventory
+ansible-playbook ping-playbook.yml
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b3dc3e39-6e2d-4af5-bff9-c7d35cfd608a" />
+
