@@ -261,3 +261,58 @@ ansible-playbook install-nginx-playbook.yml
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5c6e0302-95bb-4079-8efe-ca483202a8a4" />
+
+## Info - Ansible vault
+<pre>
+- helps you store sensitive information in an encrypted file, retrieve and use them securely
+- ansible vault is password protected encrypted file
+- at the time of creating the vault file, ansible vault prompts for password, you need to provide the vault password in order to view/edit/modify the vault protected file
+</pre>
+
+## Lab - Creating a vault protected file in ansible
+```
+ansible-vault create mysql-login-credentials.yml
+```
+The above command will prompt for password, you may type 'root@123' without quotes. If the vault password is forgotten, forget the data.
+
+You may type the below in your mysql-login-credentials.yml
+<pre>
+username: Admin
+password: Admin@123
+</pre>
+
+## Lab - View the vault protected file
+```
+ansible-vault view mysql-login-credentials.yml
+```
+When it prompts for password, type 'root@123' without quotes.
+
+
+## Lab - Edit the vault protected file
+```
+ansible-vault edit mysql-login-credentials.yml
+```
+When it prompts for password, type 'root@123' without quotes.
+
+
+## Lab - Encrypt/Decrypt an exiting text file using ansible-vault
+
+When it prompts for password, type 'root@123' or the password you gave whlie encrypting the file.
+```
+echo "Testing" > test.txt
+cat test.txt
+ansible-vault encrypt test.txt
+cat test.txt
+
+ansible-vault decrypt test.txt
+cat test.txt
+```
+
+
+## Lab - Accessing vault protected information from your ansible playbook
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day1/ansible/vault
+ansible-playbook vault-playbook --ask-vault-pass
+```
