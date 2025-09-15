@@ -35,8 +35,13 @@
   - name: Create the custom web root folder
     file: path=/var/html state=directory mode=0755
 
-  - name: Configure nginx web root folder to serve web page from our custom folder
+  - name: Configure nginx web root folder to serve web page from our custom folder in Ubuntu ansible node
+    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
     copy: src=default dest=/etc/nginx/sites-available/default
+
+  - name: Configure nginx web root folder to serve web page from our custom folder in Ubuntu ansible node
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    copy: src=nginx.conf dest=/etc/nginx/nginx.conf
 
   - name: Restart nginx web server to apply config changes in Ubuntu ansible node
     when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
