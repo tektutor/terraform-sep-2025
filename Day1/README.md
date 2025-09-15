@@ -213,3 +213,14 @@ exit
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/caf3694c-7a15-4042-88b9-947bbbe04d89" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3e52fd4a-ca96-43b1-a251-103e1f8b2e3e" />
+
+## Lab - Let's add rocky ansible node containers into the inventory and perform ansible ping
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day1/ansible
+cat inventory
+
+ansible -i inventory all -m ping
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d33861ca-f446-4d35-90e0-855674a66ebb" />
