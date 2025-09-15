@@ -18,8 +18,18 @@
     when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
     yum: name=nginx state=latest
 
-  - name: Start nginx web server
+  - name: Start nginx web server in Ubuntu ansible node
+    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
     service: name=nginx state=started
+
+  - name: Check if nginx web server is already running in Rocky ansible node
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    shell: curl http://localhost
+    register: output
+
+  - name: Start nginx web server in Rocky ansible node
+    when: ( ansible_distribution == "Rocky" and output.rc != 0 )
+    shell: nginx 
 
   - name: Create the custom web root folder
     file: path=/var/html state=directory mode=0755
@@ -27,8 +37,13 @@
   - name: Configure nginx web root folder to serve web page from our custom folder
     copy: src=default dest=/etc/nginx/sites-available/default
 
-  - name: Restart nginx web server to apply config changes
+  - name: Restart nginx web server to apply config changes in Ubuntu ansible node
+    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
     service: name=nginx state=restarted
+
+  - name: Restart nginx web server to apply config changes in Rocky ansible node
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    shell: nginx -s stop && nginx
 
   - name: Retrieve IP address
     shell: hostname -i
