@@ -85,7 +85,7 @@ ssh-keygen
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1249cc00-aed9-4fd5-a56e-f8aa3fd2d474" />
 
 ```
-cd ~/terraform-sep-2025/Day1/CustomDockerImage
+cd ~/terraform-sep-2025/Day1/CustomDockerImage/ubuntu
 cp ~/.ssh/id_ed25519.pub authorized_keys
 ls -l
 
@@ -173,3 +173,13 @@ curl http://localhost:8002
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e2aa5861-0630-47da-9a59-7924382112b7" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0233113c-3e64-4d45-9f3b-f42dd8c7e87b" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/cf1a4f2c-efcd-4414-a797-a2e8d8ecea20" />
+
+## Lab - Build a custom rocky linux ansible node image
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day1/CustomDockerImage/rocky
+cp ~/.ssh/id_ed25519.pub authorized_keys
+docker build -t tektutor/rocky-ansible-node:latest .
+docker images
+```
