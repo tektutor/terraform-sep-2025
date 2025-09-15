@@ -149,3 +149,13 @@ ansible-playbook ping-playbook.yml
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b3dc3e39-6e2d-4af5-bff9-c7d35cfd608a" />
 
+## Lab - Running install nginx playbook
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day1/ansible
+cat install-nginx-playbook.yml
+ansible-playbook -i inventory install-nginx-playbook.yml
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e2aa5861-0630-47da-9a59-7924382112b7" />
