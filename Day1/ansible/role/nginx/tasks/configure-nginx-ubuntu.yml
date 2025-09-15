@@ -1,0 +1,4 @@
+- name: Configure nginx web root folder to serve web page from our custom folder in Ubuntu ansible node
+  copy: src=default dest=/etc/nginx/sites-available/default
+  notify:
+    - Restart nginx web server to apply config changes in Ubuntu ansible node

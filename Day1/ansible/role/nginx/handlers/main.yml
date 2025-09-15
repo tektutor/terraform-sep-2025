@@ -1,0 +1,8 @@
+#SPDX-License-Identifier: MIT-0
+---
+# handlers file for nginx
+- name: Restart nginx web server to apply config changes in Ubuntu ansible node
+  service: name=nginx state=restarted
+
+- name: Restart nginx web server to apply config changes in Rocky ansible node
+  shell: nginx -s stop && nginx
