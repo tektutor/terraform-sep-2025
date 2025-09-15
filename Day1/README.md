@@ -235,3 +235,29 @@ ansible-playbook -i hosts install-nginx-playbook.yml
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fd04e8cc-b1f4-4720-83de-652bd1a93718" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f51022c7-a750-43ef-bdeb-7a8edd67ba25" />
+
+## Info - Ansible role
+<pre>
+- is a way we can write reusable code
+- ansible roles can't be executed like playbooks directly
+- ansible roles is similar to DLL(Dynamic Link Library) - it has reusable code but can't be executed directly
+- just like dll can be invoked from application, ansible roles can be invoked from ansible playbooks
+- the same ansible role can be used from multiple playbooks
+- ansible roles following a recommended directory structure
+- it looks like a playbook but it is not a playbook
+- using ansible-galaxy one can download and use read-made ansible roles from galaxy.ansible.com portal
+- we could also develop our custom ansible role using ansible-galaxy tool
+</pre>
+
+## Lab - Developing an ansible role to install nginx,configure web root folder and deploy custom web page
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day1/ansible/role
+ansible init nginx
+tree nginx
+
+ansible-playbook install-nginx-playbook.yml
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5c6e0302-95bb-4079-8efe-ca483202a8a4" />
