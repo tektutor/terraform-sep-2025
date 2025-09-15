@@ -67,3 +67,47 @@ git pull
 tree
 ```
 
+## Lab - Building custom ubuntu docker image to create ansible node containers
+
+Let's generate key pair on the ubuntu lab machine, accept all defaults by hitting enter ( 3 times :) )
+```
+ssh-keygen 
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1249cc00-aed9-4fd5-a56e-f8aa3fd2d474" />
+
+```
+cd ~/terraform-sep-2025/Day1/CustomDockerImage
+cp ~/.ssh/id_ed25519.pub authorized_keys
+ls -l
+
+docker build -t tektutor/ubuntu-ansible-node:latest .
+docker images
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a2416762-22bf-499b-b676-dc2f54794955" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9cccaba8-9817-4fc5-b8d1-7d06d0a98e34" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d835c570-ca3a-4c47-808b-311aefc153ed" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/00ee2b97-3c11-4167-adc1-b04d4fc574bf" />
+
+## Lab - Let's create couple of ubuntu ansible containers using our custom ubunut ansible node image
+```
+docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
+docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ubuntu-ansible-node:latest
+```
+
+List and see if the ubuntu1 and ubuntu2 ansible node containers are running
+```
+docker ps
+```
+
+Let's ssh into the ubuntu1 container, it shouldn't prompt for password
+```
+ssh -p 2001 root@localhost
+exit
+
+ssh -p 2002 root@localhost
+exit
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c8fcea11-0bb4-4241-b524-c0c2d06b8a87" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/25618fa5-8079-49f8-afa4-af9fb36637a7" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5006ea2b-3e40-4f53-84e9-7f48b443f8d3" />
+
