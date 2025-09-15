@@ -1,55 +1,22 @@
 - name: This playbook will install nginx web server, configures its web root folder and deploys a custom web page
   hosts: all
-  vars:
-  - greeting_msg: "Welcome to DevOps!"
-  - provisioner_tool: "Docker"
-  - conf_mgr_tool: "Ansible"
-
+  vars_files:
+  - nginx-vars.yml
   tasks:
-  - name: Install nginx web server in Ubuntu ansible node
-    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
-    apt: name=nginx state=latest update_cache=yes
+  - include: install-nginx-ubuntu.yml
+  - include: install-nginx-rocky.yml
 
-  - name: Install Extra Packages for Enterprise Linux(epel-release) in Rocky ansible node
-    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
-    yum: name=epel-release state=latest
-
-  - name: Install nginx web server in Rocky ansible node
-    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
-    yum: name=nginx state=latest
-
-  - name: Start nginx web server in Ubuntu ansible node
-    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
-    service: name=nginx state=started
-
-  - name: Check if nginx web server is already running in Rocky ansible node
-    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
-    shell: curl http://localhost
-    register: output
-    ignore_errors: yes
-
-  - name: Start nginx web server in Rocky ansible node
-    when: ( ansible_distribution == "Rocky" and output.rc != 0 )
-    shell: nginx 
+  - include: start-nginx-ubuntu.yml
+  - include: start-nginx-rocky.yml
 
   - name: Create the custom web root folder
     file: path=/var/html state=directory mode=0755
 
-  - name: Configure nginx web root folder to serve web page from our custom folder in Ubuntu ansible node
-    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
-    copy: src=default dest=/etc/nginx/sites-available/default
+  - include: configure-nginx-ubuntu.yml
+  - include: configure-nginx-rocky.yml
 
-  - name: Configure nginx web root folder to serve web page from our custom folder in Ubuntu ansible node
-    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
-    copy: src=nginx.conf dest=/etc/nginx/nginx.conf
-
-  - name: Restart nginx web server to apply config changes in Ubuntu ansible node
-    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
-    service: name=nginx state=restarted
-
-  - name: Restart nginx web server to apply config changes in Rocky ansible node
-    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
-    shell: nginx -s stop && nginx
+  - include: restart-nginx-ubuntu.yml
+  - include: restart-nginx-rocky.yml
 
   - name: Retrieve IP address
     shell: hostname -i

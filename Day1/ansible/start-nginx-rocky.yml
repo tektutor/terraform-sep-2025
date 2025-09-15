@@ -1,0 +1,9 @@
+- name: Check if nginx web server is already running in Rocky ansible node
+  when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+  shell: curl http://localhost
+  register: output
+  ignore_errors: yes
+
+- name: Start nginx web server in Rocky ansible node
+  when: ( ansible_distribution == "Rocky" and output.rc != 0 )
+  shell: nginx 
