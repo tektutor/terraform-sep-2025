@@ -186,3 +186,30 @@ docker images
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3ca01b8a-a79f-49b4-9653-e127c15bbe84" />
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/36943a63-2ced-4347-a974-310efa351fe7" />
+
+## Lab - Let's create couple of rocky ansible node containers using our custom docker image
+```
+docker run -d --name rocky1 --hostname rocky1 -p 2003:22 -p 8003:80 tektutor/rocky-ansible-node:latest
+docker run -d --name rocky2 --hostname rocky2 -p 2004:22 -p 8004:80 tektutor/rocky-ansible-node:latest
+```
+
+List the running containers
+```
+docker ps
+```
+
+SSH into the rocky1 ansible node container and see if it allows login without prompting for password
+```
+ssh -p 2003 root@localhost
+hostname -i
+hostname
+exit
+
+ssh -p 2004 root@localhost
+hostname -i
+hostname
+exit
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/caf3694c-7a15-4042-88b9-947bbbe04d89" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3e52fd4a-ca96-43b1-a251-103e1f8b2e3e" />
