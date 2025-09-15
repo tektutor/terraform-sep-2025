@@ -9,21 +9,10 @@
   - include: start-nginx-ubuntu.yml
   - include: start-nginx-rocky.yml
 
-  - name: Create the custom web root folder
-    file: path=/var/html state=directory mode=0755
-
   - include: configure-nginx-ubuntu.yml
   - include: configure-nginx-rocky.yml
 
   - include: restart-nginx-ubuntu.yml
   - include: restart-nginx-rocky.yml
 
-  - name: Retrieve IP address
-    shell: hostname -i
-    register: ip_address
-
-  - debug: var=ip_address
-
-  - name: Deploy custom web page
-    #copy: src=index.html dest=/var/html/index.html
-    template: src=index.html.j2 dest=/var/html/index.html
+  - include: common-nginx-tasks.yml
