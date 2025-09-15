@@ -107,3 +107,6 @@ exit
 ssh -p 2002 root@localhost
 exit
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c8fcea11-0bb4-4241-b524-c0c2d06b8a87" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/25618fa5-8079-49f8-afa4-af9fb36637a7" />
+
