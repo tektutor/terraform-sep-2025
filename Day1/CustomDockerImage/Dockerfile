@@ -1,6 +1,6 @@
 FROM ubuntu:24.04
-LABEL AUTHOR Jeganathan Swaminathan 
-LABEL AUTHOR jegan@tektutor.org
+LABEL AUTHOR=Jeganathan Swaminathan 
+LABEL EMAIL=jegan@tektutor.org
 
 RUN apt-get update && apt-get install -y openssh-server python3
 RUN mkdir -p /var/run/sshd
