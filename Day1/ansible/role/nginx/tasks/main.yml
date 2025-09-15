@@ -5,4 +5,3 @@
 - include_tasks: "start-nginx-{{ansible_distribution|lower}}.yml"
 - include_tasks: "configure-nginx-{{ansible_distribution|lower}}.yml"
 - include_tasks: common-nginx-tasks.yml
-- include_tasks: "restart-nginx-{{ansible_distribution|lower}}.yml"
