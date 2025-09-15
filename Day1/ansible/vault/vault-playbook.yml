@@ -1,0 +1,6 @@
+- name: This playbook demonstrates using vault protected information
+  hosts: localhost
+  vars_files:
+  - mysql-login-credentials.yml
+  tasks:
+    - debug: msg="Username - {{username}} and password - {{password}}"
