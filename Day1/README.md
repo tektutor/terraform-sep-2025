@@ -156,7 +156,11 @@ git pull
 cd Day1/ansible
 cat install-nginx-playbook.yml
 ansible-playbook -i inventory install-nginx-playbook.yml
+
+curl http://localhost:8001
+curl http://localhost:8002
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e2aa5861-0630-47da-9a59-7924382112b7" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0233113c-3e64-4d45-9f3b-f42dd8c7e87b" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/cf1a4f2c-efcd-4414-a797-a2e8d8ecea20" />
