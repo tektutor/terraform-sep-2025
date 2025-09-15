@@ -3,16 +3,16 @@
   vars_files:
   - nginx-vars.yml
   tasks:
-  - include: install-nginx-ubuntu.yml
-  - include: install-nginx-rocky.yml
+  - include_tasks: install-nginx-ubuntu.yml
+  - include_tasks: install-nginx-rocky.yml
 
-  - include: start-nginx-ubuntu.yml
-  - include: start-nginx-rocky.yml
+  - include_tasks: start-nginx-ubuntu.yml
+  - include_tasks: start-nginx-rocky.yml
 
-  - include: configure-nginx-ubuntu.yml
-  - include: configure-nginx-rocky.yml
+  - include_tasks: configure-nginx-ubuntu.yml
+  - include_tasks: configure-nginx-rocky.yml
 
-  - include: restart-nginx-ubuntu.yml
-  - include: restart-nginx-rocky.yml
+  - include_tasks: restart-nginx-ubuntu.yml
+  - include_tasks: restart-nginx-rocky.yml
 
-  - include: common-nginx-tasks.yml
+  - include_tasks: common-nginx-tasks.yml
