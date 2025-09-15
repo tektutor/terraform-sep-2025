@@ -58,6 +58,15 @@
     - the above tools normally comes out of the box in any Unix/Linux/Mac Servers
 </pre>
 
+## Demo - Installing Ansible in Ubuntu
+```
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible -y
+ansible --version
+```
+
 ## Lab - Cloning the Training repository
 ```
 cd ~/
