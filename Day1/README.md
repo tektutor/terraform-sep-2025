@@ -159,3 +159,4 @@ ansible-playbook -i inventory install-nginx-playbook.yml
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e2aa5861-0630-47da-9a59-7924382112b7" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0233113c-3e64-4d45-9f3b-f42dd8c7e87b" />
