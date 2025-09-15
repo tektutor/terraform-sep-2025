@@ -111,3 +111,13 @@ exit
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/25618fa5-8079-49f8-afa4-af9fb36637a7" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5006ea2b-3e40-4f53-84e9-7f48b443f8d3" />
 
+## Lab - Run ansible ad-hoc command using ping module
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day1/ansible
+cat inventory
+ansible -i inventory all -m ping
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/34265c2e-7ac7-4ccd-aebd-5ecaf2196a46" />
+
