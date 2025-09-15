@@ -253,7 +253,7 @@ ansible-playbook -i hosts install-nginx-playbook.yml
 ```
 cd ~/terraform-sep-2025
 git pull
-cd Day1/ansible/roles
+cd Day1/ansible/role
 ansible init nginx
 tree nginx
 
