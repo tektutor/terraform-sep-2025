@@ -224,3 +224,14 @@ cat inventory
 ansible -i inventory all -m ping
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d33861ca-f446-4d35-90e0-855674a66ebb" />
+
+## Lab - Running the refactored ansible playbook that install nginx
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day1/ansible
+ansible-playbook -i hosts install-nginx-playbook.yml
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fd04e8cc-b1f4-4720-83de-652bd1a93718" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f51022c7-a750-43ef-bdeb-7a8edd67ba25" />
