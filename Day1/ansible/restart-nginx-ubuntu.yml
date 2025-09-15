@@ -1,3 +1,2 @@
 - name: Restart nginx web server to apply config changes in Ubuntu ansible node
-  when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
   service: name=nginx state=restarted
