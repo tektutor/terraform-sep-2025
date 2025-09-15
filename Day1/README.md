@@ -67,3 +67,23 @@ git pull
 tree
 ```
 
+## Lab - Building custom ubuntu docker image to create ansible node containers
+
+Let's generate key pair on the ubuntu lab machine, accept all defaults by hitting enter ( 3 times :) )
+```
+ssh-keygen 
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1249cc00-aed9-4fd5-a56e-f8aa3fd2d474" />
+
+```
+cd ~/terraform-sep-2025/Day1/CustomDockerImage
+cp ~/.ssh/id_ed25519.pub authorized_keys
+ls -l
+
+docker build -t tektutor/ubuntu-ansible-node:latest .
+docker images
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a2416762-22bf-499b-b676-dc2f54794955" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9cccaba8-9817-4fc5-b8d1-7d06d0a98e34" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d835c570-ca3a-4c47-808b-311aefc153ed" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/00ee2b97-3c11-4167-adc1-b04d4fc574bf" />
