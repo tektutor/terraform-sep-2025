@@ -118,6 +118,8 @@ git pull
 cd Day1/ansible
 cat inventory
 ansible -i inventory all -m ping
+ansible -i inventory ubuntu1 -m ping
+ansible -i inventory ubuntu2 -m ping
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/34265c2e-7ac7-4ccd-aebd-5ecaf2196a46" />
 
