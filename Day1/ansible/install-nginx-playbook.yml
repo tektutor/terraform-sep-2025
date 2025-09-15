@@ -3,3 +3,18 @@
   tasks:
   - name: Install nginx web server in Ubuntu ansible node
     apt: name=nginx state=latest update_cache=yes
+
+  - name: Start nginx web server
+    service: name=nginx state=started
+
+  - name: Create the custom web root folder
+    file: path=/var/html state=directory mode=0755
+
+  - name: Configure nginx web root folder to serve web page from our custom folder
+    copy: src=default dest=/etc/nginx/sites-available/default
+
+  - name: Restart nginx web server to apply config changes
+    service: name=nginx state=restarted
+
+  - name: Deploy custom web page
+    copy: src=index.html dest=/var/html/index.html
