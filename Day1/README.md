@@ -45,4 +45,24 @@
 - installation of Ansible is pretty simple compared to Puppet/Chef
 - Mastering Ansible will also take less time compared to Puppet/Chef
 - Ansible is agent-less
+- the servers managed by ansible is called ansible node
+  - ansible node can be an Unix/Linux/Mac/Windows machine
+- software requirements of Ansible nodes
+  - Windows Servers
+    - Powershell must be installed
+    - WinRM must be configured
+    - the above tools normally comes out of the box in any server-grade windows OS
+  - Unix/Linux/Mac Servers
+    - Python must be installed
+    - SSH Server should be installed
+    - the above tools normally comes out of the box in any Unix/Linux/Mac Servers
 </pre>
+
+## Lab - Cloning the Training repository
+```
+cd ~/
+git clone https://github.com/tektutor/terraform-sep-2025.git
+cd terraform-sep-2025
+git pull
+```
+
