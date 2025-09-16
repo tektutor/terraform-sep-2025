@@ -62,3 +62,19 @@ kubectl get svc -l "app.kubernetes.io/managed-by=awx-operator"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/779810b0-ce2d-4491-822f-e893bbbfd7cb" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/65fd6cc5-887b-4724-8d19-2848e440c8b1" />
 
+You may access the ansible tower webconsole
+```
+http://192.168.49.2:30181
+```
+
+Retrieve the password
+```
+kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" | base64 --decode ; echo
+yDL2Cx5Za94g9MvBP6B73nzVLlmfgPjR
+```
+
+Login credentials
+<pre>
+username - admin
+password
+</pre>
