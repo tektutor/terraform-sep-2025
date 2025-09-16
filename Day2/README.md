@@ -1,4 +1,4 @@
-# Day 2
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e86f9ba-75bf-4bcf-9b3d-aa5c599a5fc0" /># Day 2
 
 ## Lab - Installing AWX 
 
@@ -342,3 +342,40 @@ go run ./error-handling.go
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2df64a25-8c8d-47d7-8756-c3259897407a" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fe05cd5e-8af4-42ad-9f45-d6a1c51389ae" />
+
+## Lab - User defined functions
+
+Create a file named functions.go with the below code
+<pre>
+package main
+
+import "fmt"
+
+func yetAnotherFunction() {
+	fmt.Println("Yet Another Function invoked")
+}
+
+func main() {
+   fmt.Println( sayHello("Golang") )
+   fmt.Println( sayHello("World") )
+   yetAnotherFunction()
+}
+
+//This function accepts a string input argument and returns a string output
+func sayHello( msg string ) string {
+  return "Hello, " + msg + " !"
+}
+
+/* function overloading is not supported by golang
+func sayHello() string {
+  return "Hello World !"
+}
+*/	
+</pre>
+
+Run your application
+```
+go run ./functions.go
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/85c65d54-d2ec-4be3-83ce-61c4ce4d9bfe" />
