@@ -170,3 +170,7 @@ Now you may verify the golang version
 ```
 go version
 ```
+It will report
+<pre>
+go version go1.25.1 linux/amd64  
+</pre>
