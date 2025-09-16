@@ -48,7 +48,7 @@ kind: AWX
 metadata:
   name: awx-tower
 spec:
-  service_type: nodeport  kubectl get svc -l "app.kubernetes.io/managed-by=awx-operator"
+  service_type: nodeport
 </pre>
 
 Let's create the ansible tower instance
