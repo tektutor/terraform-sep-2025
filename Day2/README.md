@@ -817,3 +817,14 @@ go run ./concurrency.go
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3fb2421a-c9a4-4043-bf83-34578a34e830" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2cbb2249-1bf8-48ff-b242-033b1bcf7164" />
 
+## Lab - Building go application into a binary ( useful while shipping your application to clients )
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day2/golang/concurrency
+ls
+go build
+ls
+./concurrency
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ad9c7758-0470-441a-b2e4-772025df90ed" />
