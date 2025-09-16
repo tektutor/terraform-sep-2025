@@ -307,3 +307,38 @@ go run ./arrays.go
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2a671bb5-9916-4e74-8adc-09ab97cec606" />
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e5eb544-cb8b-4f0b-9fbc-d10ee14994f9" />
+
+## Lab - Error Handling in golang
+Create a file named error-handling.go with the below code
+<pre>
+package main
+
+import (
+	"fmt"
+	"os"
+	"os/user"
+	"github.com/sttk/stringcase"
+)
+
+func main() {
+	u, err := user.Current()
+
+	if err != nil {
+		fmt.Println("Cannot get current user:", err)
+		os.Exit(1)
+	}
+
+	fmt.Printf("Hello %s, welcome !\n", stringcase.PascalCase(u.Username) )
+}
+</pre>
+
+Run your application
+```
+go mod init main
+cat go.mod
+go mod tidy
+go run ./error-handling.go
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2df64a25-8c8d-47d7-8756-c3259897407a" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fe05cd5e-8af4-42ad-9f45-d6a1c51389ae" />
