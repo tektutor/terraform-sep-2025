@@ -510,7 +510,7 @@ import "fmt"
 func sayHello( msgPtr *string ) {
 
 	//Dereferencing - the values stored at address pointed by msgPtr will be printed here
-	fmt.Println("Inside sayHello funciton ", *msgPtr )
+	fmt.Println("Inside sayHello function ", *msgPtr )
 
 	//Here the address pointed by msgPtr pointer will be printed
 	fmt.Println("Address pointed by msgPtr is", msgPtr )
