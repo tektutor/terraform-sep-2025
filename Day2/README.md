@@ -255,3 +255,55 @@ Run your application
 go run ./if-else.go
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d87bde30-250e-46aa-a88e-cf1149801569" />
+
+## Lab - Golang array
+
+Create a file named arrays.go with the below code
+<pre>
+package main
+
+import "fmt"
+
+func main() {
+
+	//We have declared an array of integers of size 5
+	//So we can store upto 5 integer values into this array
+	//go lang array size is fixed
+	//array index starts from 0
+ 	//valid array index range is 0 to 4, total 5 values
+	var arr [5]int
+
+	//let's assign some values into the array
+	arr[0]= 10
+	arr[1]= 20
+	arr[2]= 30
+	arr[3]= 40
+	arr[4]= 50
+
+	//arr[5] = 60 This will report array index out of bounds error
+
+	fmt.Println("Array elements are ...")
+	fmt.Println(arr)
+
+	count := len(arr)
+	fmt.Println("Length of array :", count)
+	
+	//Modifying values stored in an array
+	arr[3] = 25
+
+	fmt.Println("Array elements are ...")
+	for i := 0; i < count; i++ {
+		fmt.Printf("%d\t", arr[i])
+	}
+	fmt.Println()
+}	
+</pre>
+
+Run your application
+```
+go run ./arrays.go
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2a671bb5-9916-4e74-8adc-09ab97cec606" />
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e5eb544-cb8b-4f0b-9fbc-d10ee14994f9" />
