@@ -77,3 +77,41 @@ Login credentials
 username - admin
 password
 </pre>
+
+## Info - SOLID Design Principles
+<pre>
+S - Single Responsibility Principle (SRP)
+O - Open Closed Principle (OCP)
+    - Your design is good if it satisfies the following desing principles
+    - A design/code is considered good if it is open of extension
+    - Extending new functionality should be done without modifying existing code
+    - To add new functionality you can write new code 
+L - Liskov Substitution Principle (LSP)
+I - Interface Seggregation
+D - Dependency Injection or Dependency Inversion or Inversion of Control(IOC)
+</pre>
+
+
+## Info - Golang Overview
+<pre>
+- golang is developed by Google using C programming language
+- golang is a compiled programming language
+- golang syntax resembles very close to C programming language
+- golang has 25 keywords
+- golang only supports for loop
+- just like C/C++/C# main function is the entry-point function ( the very function that will invoked when you run a go application )
+- golang supports pointers but memory is managed by garbage collector unlike C/C++
+- golang doesn't support class
+- golang only supports functions
+- using golang one can develop a new compiler/interpreter, a game, console based application, graphical application that runs on your local machine, can develop mobile applications, can develop AI/ML applications, web applications, etc.,
+- using golang one can develop REST API, Microservices, etc.,
+- is case-sensitive
+- statically typed programming language
+- performance wise, it is faster than most compiled languages, definitely more faster than interpretted and scripting languages
+- even compilation is done faster in go lang for bulky applications
+- Some of the popular tools developed in Golang
+  - Terraform
+  - Docker
+  - Kubernetes
+  - Openshift  
+</pre>
