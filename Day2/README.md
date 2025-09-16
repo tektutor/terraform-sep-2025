@@ -229,4 +229,4 @@ Run your application
 go run ./userinputs.go
 ```
 
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/542460d0-9929-4bcb-b17c-9b7b94125395" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c5457c8f-aee7-4ed2-904b-8bbc2f477fdf" />
