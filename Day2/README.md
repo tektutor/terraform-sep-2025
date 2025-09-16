@@ -8,8 +8,8 @@
 curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
 
-minikube config cpus 4
-minikube config memory 12288
+minikube config set cpus 4
+minikube config set memory 12288
 minikube start
 
 # Download kubectl
