@@ -53,6 +53,6 @@ spec:
 
 Let's create the ansible tower instance
 ``` 
-kubectl apply -f awx.ym
+kubectl apply -f awx.yml
 ```
 
