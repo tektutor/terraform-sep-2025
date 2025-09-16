@@ -1,4 +1,4 @@
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e86f9ba-75bf-4bcf-9b3d-aa5c599a5fc0" /># Day 2
+<img width="1662" height="758" alt="image" src="https://github.com/user-attachments/assets/2d22c204-7074-4e4d-a71c-88987ce8a6ac" /><img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e86f9ba-75bf-4bcf-9b3d-aa5c599a5fc0" /># Day 2
 
 ## Lab - Installing AWX 
 
@@ -379,3 +379,29 @@ go run ./functions.go
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/85c65d54-d2ec-4be3-83ce-61c4ce4d9bfe" />
+
+## Lab - Functions with multiple returns
+
+Create a file named funciton-with-multiple-returns.go with below code
+<pre>
+package main
+
+import "fmt"
+
+func myFunction() (int,int) {
+  return 10, 20
+}
+
+func main() {
+  x, y := myFunction() // := is a short form of declaring a new variable and initialized with some value
+
+  fmt.Println( "Value of x is ", x )
+  fmt.Println( "Value of y is ", y )
+}	
+</pre>
+Run your application
+```
+go run ./function-with-multiple-returns.go
+```
+<img width="1662" height="758" alt="image" src="https://github.com/user-attachments/assets/fefcc3eb-fb14-4c1f-92c2-dff062ba2133" />
+
