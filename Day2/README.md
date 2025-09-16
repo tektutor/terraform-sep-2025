@@ -69,7 +69,7 @@ http://192.168.49.2:30181
 
 Retrieve the password
 ```
-kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" | base64 --decode ; echo
+kubectl get secret awx-tower-admin-password -o jsonpath="{.data.password}" | base64 --decode ; echo
 yDL2Cx5Za94g9MvBP6B73nzVLlmfgPjR
 ```
 
