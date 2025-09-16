@@ -406,6 +406,7 @@ go run ./function-with-multiple-returns.go
 <img width="1662" height="758" alt="image" src="https://github.com/user-attachments/assets/fefcc3eb-fb14-4c1f-92c2-dff062ba2133" />
 
 ## Lab - Golang loops 
+The only type of loop supported in golang is for loop, but it supports many variations.  Hence, with for loop we can achieve whatever we do with regular for loop, while-do, do-while, etc.,
 
 Create a file named loops.go with the below code
 <pre>
