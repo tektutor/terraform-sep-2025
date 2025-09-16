@@ -19,6 +19,7 @@ sudo mv kubectl /usr/local/bin
 ```
 
 #### Let's install 
+```
 # Clone the awx operator to install Ansible Tower within minikube
 git clone https://github.com/ansible/awx-operator.git
 cd awx-operator
@@ -31,7 +32,7 @@ make deploy
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d4786b14-9d1c-4d39-bf2b-a0cfa7c50abc" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/24dbf636-80bd-4e39-9936-7224de6e91c8" />
-![Uploading image.png…]()
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a8268e57-5688-461d-8d8c-9fd5c429b95f" />
 
 #### Check if the AWX required pods are running
 ```
