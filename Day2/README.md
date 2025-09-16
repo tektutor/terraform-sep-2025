@@ -18,6 +18,8 @@ chmod +x ./kubectl
 sudo mv kubectl /usr/local/bin
 ```
 
+
+
 #### Let's install 
 ```
 # Clone the awx operator to install Ansible Tower within minikube
@@ -144,3 +146,8 @@ D - Dependency Injection or Dependency Inversion or Inversion of Control(IOC)
 - return
 - var
 </pre>
+
+## Lab - Installing Golang in Ubuntu
+```
+https://go.dev/doc/install
+```
