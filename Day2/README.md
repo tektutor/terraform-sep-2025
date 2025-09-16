@@ -767,3 +767,52 @@ go mod tidy //This will download all the dependent modules of main.go and any ot
 go run ./main.go
 ```
 
+## Lab - Golang concurrency
+
+Create a file named concurrency.go with the below code
+<pre>
+package main
+
+import (
+   "fmt"
+   "time"
+)
+
+func firstFunction( count int ) {
+   for i := 0; i < count; i++ {
+	fmt.Println("First function ", i )
+	time.Sleep(time.Millisecond * 5 )
+   }
+}
+
+func secondFunction( count int ) {
+   for i := 0; i < count; i++ {
+	fmt.Println("Second function ", i )
+	time.Sleep(time.Millisecond * 5 )
+   }
+}
+
+func main() {
+	fmt.Println ( "Press any key to exit ...")
+
+	//Invoking firstFunction and secondFunction in sequence one after the other
+	firstFunction(10)
+	secondFunction(10)
+
+	//We wish to run both firstFunction and secondFunction in parallel
+	go firstFunction( 1000 )
+	go secondFunction( 1000 )
+
+	var tmp string
+	fmt.Scanln(&tmp) //this will make sure the program waits until some key is pressed to exit
+}	
+</pre>
+
+Run it
+```
+go run ./concurrency.go
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9d8e8839-91b6-4c69-95eb-232e385a244c" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3fb2421a-c9a4-4043-bf83-34578a34e830" />
+
