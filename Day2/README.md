@@ -38,3 +38,21 @@ make deploy
 ```
 oc get pods -n awx -w
 ```
+
+#### Let's create a nodeport service for AWX
+Create a file awx.yml with the below code
+<pre>
+---
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx-tower
+spec:
+  service_type: nodeport  
+</pre>
+
+Let's create the ansible tower instance
+``` 
+kubectl apply -f awx.ym
+```
+
