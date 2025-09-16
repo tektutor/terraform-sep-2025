@@ -462,4 +462,39 @@ go run ./loops.go
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/cbfe58a2-fd87-4573-b706-f61e58b8a144" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2aac4fcd-add3-4d23-9bd7-a71aa9c5336b" />
 
+## Lab - Golang map
+Create a file named maps.go with the below code
+<pre>
+package main
 
+import "fmt"
+
+func main() {
+
+	toolsPath := map[string]string {
+		"java_home": "/usr/lib/jdk11",
+		"mvn_home": "/usr/share/maven",
+	}
+
+	fmt.Println("Java home directory ", toolsPath["java_home"])
+
+	//add a key,value pair into an existing map
+	toolsPath["go_home"] = "/usr/go"
+
+	//iterating a map and printing its values
+	for key,value := range toolsPath {
+		fmt.Println(key,value)
+	}
+
+	//delete a key-value pair from an existing map
+	delete(toolsPath, "go_home")
+	fmt.Println(toolsPath)
+}	
+</pre>
+
+Run it
+```
+go run ./maps.go
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d7ed88bc-8b62-4b11-89eb-74d7565f480a" />
