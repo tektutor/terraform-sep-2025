@@ -1,4 +1,4 @@
-<img width="1662" height="758" alt="image" src="https://github.com/user-attachments/assets/2d22c204-7074-4e4d-a71c-88987ce8a6ac" /><img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e86f9ba-75bf-4bcf-9b3d-aa5c599a5fc0" /># Day 2
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e2c767d-7f4e-4b3b-aaa8-fa6524e7d87b" /><img width="1662" height="758" alt="image" src="https://github.com/user-attachments/assets/2d22c204-7074-4e4d-a71c-88987ce8a6ac" /><img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e86f9ba-75bf-4bcf-9b3d-aa5c599a5fc0" /># Day 2
 
 ## Lab - Installing AWX 
 
@@ -405,3 +405,40 @@ go run ./function-with-multiple-returns.go
 ```
 <img width="1662" height="758" alt="image" src="https://github.com/user-attachments/assets/fefcc3eb-fb14-4c1f-92c2-dff062ba2133" />
 
+## Lab - Golang loops 
+
+Create a file named loops.go with the below code
+<pre>
+package main
+
+import "fmt"
+
+func main() {
+	count := 5 //Declares a count variable of type int and assigns a value 5
+
+	for count > 0 {
+		fmt.Println("Before decrementing ", count)
+
+		count-- //equivalent to count = count - 1
+		//golang doesn't support pre-decrement or pre-increment unlinke C and C++
+
+		fmt.Println("After decrementing ", count )
+	}
+	fmt.Println("Value of count is ", count, " after for loop")
+
+	count = 0 //variable is already declared in line number 7, we are just trying to reset the value to 0 here
+
+	fmt.Println()
+	for count=1; count<10; count++ {
+		fmt.Printf( "%d\t", count )
+	}
+	fmt.Println()
+}	
+</pre>
+
+Run your application
+```
+go run ./loops.go
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0f230daf-9bc1-448f-8a2f-d3f52208da2d" />
