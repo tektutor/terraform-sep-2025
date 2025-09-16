@@ -36,7 +36,7 @@ make deploy
 
 #### Check if the AWX required pods are running
 ```
-oc get pods -n awx -w
+kubectl get pods -n awx -w
 ```
 
 #### Let's create a nodeport service for AWX
@@ -48,7 +48,7 @@ kind: AWX
 metadata:
   name: awx-tower
 spec:
-  service_type: nodeport  
+  service_type: nodeport  kubectl get svc -l "app.kubernetes.io/managed-by=awx-operator"
 </pre>
 
 Let's create the ansible tower instance
