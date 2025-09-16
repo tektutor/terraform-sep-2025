@@ -230,3 +230,28 @@ go run ./userinputs.go
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c5457c8f-aee7-4ed2-904b-8bbc2f477fdf" />
+
+## Lab - if else
+
+Create file named if-else.go with the below code
+<pre>
+package main
+
+import "fmt"
+
+func main() {
+	x := 100
+
+	if x % 2 == 0 {
+		fmt.Println(x, "is an even number")
+	} else {
+		fmt.Println(x, "is an odd number")
+	}
+}	
+</pre>
+
+Run your application
+```
+go run ./if-else.go
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d87bde30-250e-46aa-a88e-cf1149801569" />
