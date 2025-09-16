@@ -150,4 +150,5 @@ D - Dependency Injection or Dependency Inversion or Inversion of Control(IOC)
 ## Lab - Installing Golang in Ubuntu
 ```
 https://go.dev/doc/install
+wget https://go.dev/dl/go1.25.1.linux-amd64.tar.gz
 ```
