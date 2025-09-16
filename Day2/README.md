@@ -416,6 +416,7 @@ import "fmt"
 func main() {
 	count := 5 //Declares a count variable of type int and assigns a value 5
 
+	//similar to while loop
 	for count > 0 {
 		fmt.Println("Before decrementing ", count)
 
@@ -429,11 +430,27 @@ func main() {
 	count = 0 //variable is already declared in line number 7, we are just trying to reset the value to 0 here
 
 	fmt.Println()
+	//Regular for loop
 	for count=1; count<10; count++ {
 		fmt.Printf( "%d\t", count )
 	}
 	fmt.Println()
-}	
+
+	//similar to while do
+	count = 0
+
+	for {  //Infinite loop
+
+		fmt.Printf ("Inside for loop %d\n", count ) 	
+		count++
+
+		if count > 3 {
+			break
+		}
+	}
+	fmt.Println("Control reached outside for infinite for loop")
+}
+
 </pre>
 
 Run your application
@@ -441,4 +458,7 @@ Run your application
 go run ./loops.go
 ```
 
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0f230daf-9bc1-448f-8a2f-d3f52208da2d" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/cbfe58a2-fd87-4573-b706-f61e58b8a144" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2aac4fcd-add3-4d23-9bd7-a71aa9c5336b" />
+
+
