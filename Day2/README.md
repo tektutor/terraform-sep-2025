@@ -548,4 +548,51 @@ go run ./pointers.go
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d2cc2fc7-cc8b-465d-8d65-c51f514ea688" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c6addf7d-a776-4924-b390-f3ca4e458c40" />
 
+## Lab - Golang struct
+
+Create a file named struct.go with the below code
+<pre>
+package main
+
+import "fmt"
+
+type Rectangle struct {
+  length int
+  width int
+}
+
+func ( rect Rectangle ) Area() int {
+   area := rect.length * rect.width
+   return area
+}
+
+func (rect Rectangle) GetLength() int {
+  return rect.length
+}
+
+func (rect Rectangle) GetWidth() int {
+  return rect.width
+}
+
+func main() {
+   rectangle := Rectangle {
+      length: 100,
+      width : 200, 
+   }
+
+   fmt.Printf("Length of rectangle : %d\n", rectangle.GetLength() )
+   fmt.Printf("Width of rectangle  : %d\n", rectangle.GetWidth() )
+   fmt.Printf("Area of rectangle   : %d\n", rectangle.Area() )
+
+}
+</pre>
+
+Run it
+```
+go run ./struct.go
+```
+
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/99d099dd-8b3a-4ce9-87df-b97ac68bc25f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/80b08b1f-815a-4b98-b029-7b1e93b1fe2d" />
 
