@@ -548,7 +548,7 @@ go run ./pointers.go
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d2cc2fc7-cc8b-465d-8d65-c51f514ea688" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c6addf7d-a776-4924-b390-f3ca4e458c40" />
 
-## Lab - Golang struct
+## Lab - Golang struct with Methods
 
 Create a file named struct.go with the below code
 <pre>
