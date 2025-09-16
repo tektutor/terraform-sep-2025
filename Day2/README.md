@@ -52,7 +52,8 @@ spec:
 </pre>
 
 Let's create the ansible tower instance
-``` 
+```
+kubectl config set-context --current --namespace=awx
 kubectl apply -f awx.yml
 ```
 
