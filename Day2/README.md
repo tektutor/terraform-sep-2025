@@ -1,4 +1,4 @@
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e2c767d-7f4e-4b3b-aaa8-fa6524e7d87b" /><img width="1662" height="758" alt="image" src="https://github.com/user-attachments/assets/2d22c204-7074-4e4d-a71c-88987ce8a6ac" /><img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e86f9ba-75bf-4bcf-9b3d-aa5c599a5fc0" /># Day 2
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3c06a937-2911-4c3a-99b3-01b1b32baebd" /><img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e2c767d-7f4e-4b3b-aaa8-fa6524e7d87b" /><img width="1662" height="758" alt="image" src="https://github.com/user-attachments/assets/2d22c204-7074-4e4d-a71c-88987ce8a6ac" /><img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e86f9ba-75bf-4bcf-9b3d-aa5c599a5fc0" /># Day 2
 
 ## Lab - Installing AWX 
 
@@ -498,3 +498,54 @@ go run ./maps.go
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d7ed88bc-8b62-4b11-89eb-74d7565f480a" />
+
+## Lab - Pointers in golang
+
+Create a file named pointers.go with the below code
+<pre>
+package main
+
+import "fmt"
+
+func sayHello( msgPtr *string ) {
+
+	//Dereferencing - the values stored at address pointed by msgPtr will be printed here
+	fmt.Println("Inside sayHello funciton ", *msgPtr )
+
+	//Here the address pointed by msgPtr pointer will be printed
+	fmt.Println("Address pointed by msgPtr is", msgPtr )
+
+	//Prints the address of msgPtr
+	fmt.Println("Address of msgPtr is", &msgPtr ) 
+
+	//The value stored at the address pointed by msgPtr is assigned to tmp string
+	tmp := *msgPtr
+
+	*msgPtr = tmp + " Golang" + " !"
+
+	fmt.Println("Inside sayHello before return ", *msgPtr) 
+}
+
+func main() {
+	//declares a string variable named str with value "Hello"
+	msg := "Hello"
+
+	fmt.Println("Message before calling sayHello function is ", msg )
+	fmt.Println("Address of msg string is ", &msg)
+
+	sayHello( &msg )
+
+	fmt.Println("Message after calling sayHello function is ", msg )
+}	
+</pre>
+
+Run it
+```
+go run ./pointers.go
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b1a96d5f-bc5c-41dd-a57f-fa682df90b4a" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d2cc2fc7-cc8b-465d-8d65-c51f514ea688" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c6addf7d-a776-4924-b390-f3ca4e458c40" />
+
+
