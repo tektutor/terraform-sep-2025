@@ -4,15 +4,21 @@
 
 #### Let's install minikube
 ```
+
 curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+
+minikube config cpus 4
+minikube config memory 12288
 minikube start
 
 # Download kubectl
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x ./kubectl
 sudo mv kubectl /usr/local/bin
+```
 
+#### Let's install 
 # Clone the awx operator to install Ansible Tower within minikube
 git clone https://github.com/ansible/awx-operator.git
 cd awx-operator
