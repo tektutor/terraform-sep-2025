@@ -1,4 +1,4 @@
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3c06a937-2911-4c3a-99b3-01b1b32baebd" /><img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e2c767d-7f4e-4b3b-aaa8-fa6524e7d87b" /><img width="1662" height="758" alt="image" src="https://github.com/user-attachments/assets/2d22c204-7074-4e4d-a71c-88987ce8a6ac" /><img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e86f9ba-75bf-4bcf-9b3d-aa5c599a5fc0" /># Day 2
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3c06a937-2911-4c3a-99b3-01b1b32baebd" /><img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e2c767d-7f4e-4b3b-aaa8-fa6524e7d87b" /><img width="1662" height="758" alt="image" src="https://github.com/user-attachments/assets/2d22c204-7074-4e4d-a71c-88987ce8a6ac" /><img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e86f9ba-75bf-4bcf-9b3d-aa5c599a5fc0" /># 
 
 ## Lab - Installing AWX 
 
@@ -689,7 +689,7 @@ go run ./slice.go
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/55d3add8-cd41-42ac-a77b-cdaaa0e23451" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/51d694c5-7dd3-440e-9f07-7b888b7d0802" />
 
-Lab - Creating custom Golang modules
+## Lab - Creating custom Golang modules
 
 Let's create three modules namely main, addition and subtraction
 
