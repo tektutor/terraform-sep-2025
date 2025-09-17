@@ -220,3 +220,13 @@ terraform destroy --auto-approve
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b292afbd-14ab-46d9-ad6b-bc25d4acbf1c" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f04457f9-6b03-4376-a764-9de486b6e69f" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1f75f849-93ee-43c0-814d-413f0c589842" />
+
+## Lab - Terraform - Running commands on the remote machine using remote-exec provisioner block
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day3/terraform/remote-exec
+terraform init
+terraform apply --auto-approve
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6901c010-b9b6-488b-b80c-bef39844a1aa" />
