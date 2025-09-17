@@ -63,6 +63,7 @@ resource "null_resource" "ubuntu_remote_execution" {
       user = "root"
       port = "200${count.index+1}"
       host = "localhost"
+      private_key = file("~/.ssh/id_ed25519")
    }
 
    provisioner "remote-exec" {
@@ -90,6 +91,7 @@ resource "null_resource" "rocky_remote_execution" {
       user = "root"
       port = "300${count.index+1}"
       host = "localhost"
+      private_key = file("~/.ssh/id_ed25519")
    }
 
    provisioner "remote-exec" {
