@@ -167,3 +167,14 @@ terraform apply --auto-approve
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d90af2a7-2c89-4611-b7b2-34fbd65c5914" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2c460ca7-5811-4807-ac54-a2bdbbbfef32" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a84bd256-0944-41c8-9760-4927bb0021b1" />
+
+You could change the container names in the inputs.tf file and perform terraform apply.  Terraform will replace the old containers with new containers with the updated container names.
+
+Once you are done, you may dispose the resources created by terraform
+```
+terraform destroy --auto-approve
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0ca90aa6-80bf-4560-9345-43ef7e87e12b" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3b2c1b5a-b7d3-4864-ad58-f391f83ca174" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/17dbaa36-c0b6-4054-8494-4f68ce16f038" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/05482fc0-d9d8-4d5a-96be-e974aacabc18" />
