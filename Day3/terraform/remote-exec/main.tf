@@ -15,12 +15,12 @@ resource "docker_container" "myubuntu_container" {
 
     ports {
 	internal = "22"
-	external = "200${count.index+1}"
+	external = "2${format("%03d",count.index+1)}"
     }
 
     ports {
 	internal = "80"
-	external = "800${count.index+1}"
+	external = "8${format("%03d", count.index+1)}"
     }
 
     depends_on = [
@@ -37,12 +37,12 @@ resource "docker_container" "myrocky_container" {
 
     ports {
 	internal = "22"
-	external = "300${count.index+1}"
+	external = "3${format("%03d", count.index+1)}"
     }
 
     ports {
 	internal = "80"
-	external = "900${count.index+1}"
+	external = "9${format("%03d", count.index+1)}"
     }
 
     depends_on = [
@@ -61,8 +61,13 @@ resource "null_resource" "ubuntu_remote_execution" {
    connection {
       type = "ssh"
       user = "root"
-      port = "200${count.index+1}"
+      port = "2${format("%03d",count.index+1)}"
       host = "localhost"
+      private_key = file("~/.ssh/id_ed25519")
+
+      timeout = "15s"  #wait upto 15s before attempting SSH
+      agent   = false  
+
    }
 
    provisioner "remote-exec" {
@@ -88,8 +93,12 @@ resource "null_resource" "rocky_remote_execution" {
    connection {
       type = "ssh"
       user = "root"
-      port = "300${count.index+1}"
+      port = "3${format("%03d",count.index+1)}"
       host = "localhost"
+      private_key = file("~/.ssh/id_ed25519")
+
+      timeout = "15s"  #wait upto 15s before attempting SSH
+      agent   = false  
    }
 
    provisioner "remote-exec" {
