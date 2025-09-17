@@ -43,3 +43,70 @@ terraform --version
        - IN case to provision certain resource you declarative terraform script(manifest) file depends on already existing resource
          then, we call them as DataSources or Data block
 </pre>
+
+## Info - Terraform Resources
+<pre>
+- Each Terraform Provider supports one to many Resources and one to many Datasources
+- For instance, the docker provider supports the following resources
+  - docker_image
+  - docker_container
+</pre>
+
+## Lab - Using existing Docker Image to provision containers locally
+
+First of all, you need a create folder
+```
+cd ~
+mkdir -p terraform-projects/ex1
+cd terraform-projects/ex1
+touch main.tf
+```
+
+Create a file named main.tf
+```
+terraform {
+  required_providers {
+    docker = {
+      source = "kreuzwerker/docker"
+      version = "3.6.2"
+    }
+  }
+}
+
+provider "docker" {
+  # Configuration options
+}
+
+# Terraform will consider the docker image as a read-only resource as we are using data block
+data "docker_image" "tektutor_ansible_ubuntu_image" {
+   name = "tektutor/ubuntu-ansible-node:latest"
+}
+
+# Terraform will consider the docker image as a read-only resource as we are using data block
+data "docker_image" "tektutor_ansible_rocky_image" {
+   name = "tektutor/rocky-ansible-node:latest"
+}
+
+# Terraform manages this resource, hence Terraform can Create, Replace, Update, Delete this resource (CRUD operations)
+resource "docker_container" "my_ubuntu_container1" {
+   image = data.docker_image.tektutor_ansible_ubuntu_image.name
+   name  = "ubuntu_container_1"
+}
+
+# Terraform manages this resource, hence Terraform can Create, Replace, Update, Delete this resource (CRUD operations)
+resource "docker_container" "my_rocky_container1" {
+   image = data.docker_image.tektutor_ansible_rocky_image.name
+   name  = "rocky_container_1"
+}
+```
+Let's ensure the required terraform providers are downloaded by Terraform before proceeding further
+```
+cd ~/terraform-projects/ex1
+terraform init
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/77549396-feb7-4254-ba15-ce0b08eec782" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/724608e2-1b27-4b97-a151-bb9c185e0824" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1e273a55-a3dc-4c4d-b843-4a7e113a6902" />
+
+
