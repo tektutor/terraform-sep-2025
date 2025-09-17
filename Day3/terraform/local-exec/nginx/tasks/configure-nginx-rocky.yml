@@ -1,0 +1,4 @@
+- name: Configure nginx web root folder to serve web page from our custom folder in Ubuntu ansible node
+  copy: src=nginx.conf dest=/etc/nginx/nginx.conf
+  notify:
+  - Restart nginx web server to apply config changes in Rocky ansible node

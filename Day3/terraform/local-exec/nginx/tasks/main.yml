@@ -1,0 +1,7 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for nginx
+- include_tasks: "install-nginx-{{ansible_distribution|lower}}.yml"
+- include_tasks: "start-nginx-{{ansible_distribution|lower}}.yml"
+- include_tasks: "configure-nginx-{{ansible_distribution|lower}}.yml"
+- include_tasks: common-nginx-tasks.yml
