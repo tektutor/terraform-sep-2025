@@ -110,3 +110,25 @@ terraform init
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1e273a55-a3dc-4c4d-b843-4a7e113a6902" />
 
 
+
+Let's verify what terraform will do if we run it
+```
+cd ~/terraform-projects/ex1
+terraform plan
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9380afeb-8979-4cc6-9863-a97201235f80" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/85b1bda0-5e12-45ac-a7e9-3e1172d1d55d" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ff213a63-c250-462b-9a32-41ce9503cacd" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8090ea60-e433-4823-937e-0f07ea135ba1" />
+
+Let's provision the containers using our Terraform manifest script
+```
+cd ~/terraform-projects/ex1
+terraform apply
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/50157606-f42b-44de-b433-6b0b7ab0e67d" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/25abb5ce-4ca0-467d-9160-c04455574ea5" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8d61dc26-c107-4e69-a4fc-a5abf780c8ed" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/44560ac6-08fa-41f3-af33-a4a1dd652775" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9485e8a2-e1ec-48ab-8205-301958b01a3f" />
