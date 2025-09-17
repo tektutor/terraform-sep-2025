@@ -209,3 +209,11 @@ curl http://localhost:8002
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/045d1261-3bd9-4e2b-a42f-711ccb14e216" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bdc34756-138a-4735-b63d-465cda2cc3f4" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4d459cf8-3389-471e-8471-1e6c2914e284" />
+
+Once you are done, you may dispose the resources
+```
+terraform destroy --auto-approve
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b292afbd-14ab-46d9-ad6b-bc25d4acbf1c" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f04457f9-6b03-4376-a764-9de486b6e69f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1f75f849-93ee-43c0-814d-413f0c589842" />
