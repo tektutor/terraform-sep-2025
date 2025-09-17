@@ -261,3 +261,25 @@ floor(4.9) --> 4
 <pre>
 length([1,2,3]) --> 3  
 </pre>
+
+## Lab - Writing custom terraform module
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day3/terraform/custom-terraform-module
+terraform init
+terraform apply --auto-approve
+docker ps
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/19d145fe-749e-4fbf-bb70-4d7294db4190" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/24a0d3ee-6e9e-42aa-9c75-299177f0ee68" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ce7bdaf6-8ed9-41e7-bb31-e26f2f301ddc" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8c273ac5-6d20-4f9e-a6b4-27a90c6c5a1a" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/865667ce-1361-4a33-84cd-472835b66079" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/17c33094-1a05-43d9-9589-4f5357a66920" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b3bca78a-2243-4daf-ad42-d02270f46b19" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/67ce7435-3afe-4962-92da-5bedb4e142b9" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3bd78401-8f4e-43e7-a102-15d3453a45b8" />
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/434d53d5-6eed-4ea5-b130-3f0de747f4f4" />
