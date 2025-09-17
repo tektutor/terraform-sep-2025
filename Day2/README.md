@@ -80,7 +80,7 @@ username - admin
 password
 </pre>
 
-#### Troubleshooting pods crash and AWX Dashboarad login failure
+#### Troubleshooting pods crash and AWX Dashboard login failure
 
 Create a file named kustomization.yaml with below code
 <pre>
