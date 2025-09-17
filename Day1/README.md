@@ -16,7 +16,7 @@
 <pre>
 - is one of the oldest configuration management tool  
 - it uses Puppet Proprietary language as the Domain Specific Language(DSL) to write the automation code
-- it follows client/servcer architecture
+- it follows client/server architecture
 - the machines/servers/workstations that are managed by Puppet - we need to install a Puppet agent
 - Puppet nodes are the servers managed by Puppet
 - Puppet nodes can be
