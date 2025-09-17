@@ -41,6 +41,6 @@ resource "local_file" "my_local_file" {
    content  = "this is a test file"
 
    provisioner "local-exec" {
-	command = "ansible-playbook install-nginx-playbook.yml"
+	command = "ansible-playbook -i ./inventory.py install-nginx-playbook.yml"
    }
 }
