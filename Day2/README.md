@@ -71,7 +71,7 @@ http://192.168.49.2:30181
 
 Retrieve the password
 ```
-kubectl get secret awx-tower-admin-password -o jsonpath="{.data.password}" | base64 --decode 
+kubectl get secret awx-tower-admin-password -n awx -o jsonpath='{.data.password}' | base64 -d; echo
 ```
 
 Login credentials
@@ -79,6 +79,53 @@ Login credentials
 username - admin
 password
 </pre>
+
+#### Troubleshooting pods crash and AWX Dashboarad login failure
+
+Create a file named kustomization.yaml with below code
+<pre>
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: awx
+resources:
+  - github.com/ansible/awx-operator/config/default?ref=2.19.1
+
+images:
+  - name: quay.io/ansible/awx-operator
+    newTag: 2.19.1
+</pre>
+
+Apply
+```
+kubectl apply -k .
+```
+
+Delete your awx-tower-task-xxyyzz and awx-tower-web-xxyyzz pod
+```
+kubectl delete pod awx-tower-task-xxyyzz awx-tower-web-xxyyzz
+```
+
+Wait until postgresdb upgrades to 15.0 and awx-tower-task and awx-tower-web pod turns to running state
+
+Once you see
+<pre>
+kubectl get pods -n awx -w
+
+NAME                                               READY   STATUS      RESTARTS   AGE
+awx-operator-controller-manager-58b7c97f4b-p58r2   2/2     Running     0          9m5s
+awx-tower-migration-24.6.1-k7tnl                   0/1     Completed   0          5m15s
+awx-tower-postgres-15-0                            1/1     Running     0          7m35s
+awx-tower-task-5f55685d77-crlp5                    4/4     Running     0          6m13s
+awx-tower-web-75dbfddbf-h5gmg                      3/3     Running     0          6m15s
+</pre>
+	
+Retrieve your admin password
+```
+kubectl get secret awx-tower-admin-password -n awx -o jsonpath='{.data.password}' | base64 -d; echo
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/54e7f522-e6b4-4fe4-ac93-d8e2fa6a861f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/72db3ac9-cad6-4c5a-bb20-74c407a60306" />
 
 ## Info - SOLID Design Principles
 <pre>
