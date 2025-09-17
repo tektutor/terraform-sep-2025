@@ -164,3 +164,6 @@ terraform apply --auto-approve
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b0a07e94-1e12-4e2e-9d33-a996824907f7" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/eb411c3d-06bd-4b31-affd-76bfb8058630" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/584e5581-6a7f-4afd-9336-e28ff8d8f293" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d90af2a7-2c89-4611-b7b2-34fbd65c5914" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2c460ca7-5811-4807-ac54-a2bdbbbfef32" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a84bd256-0944-41c8-9760-4927bb0021b1" />
