@@ -19,6 +19,10 @@ resource "docker_container" "my_ubuntu_container1" {
 	internal = "80"
 	external = "8001"
     }
+
+    depends_on = [
+       data.docker_image.tektutor_ansible_ubuntu_image
+    ]
 }
 
 resource "docker_container" "my_rocky_container1" {
@@ -34,13 +38,27 @@ resource "docker_container" "my_rocky_container1" {
 	internal = "80"
 	external = "8002"
     }
+
+    depends_on = [
+       data.docker_image.tektutor_ansible_rocky_image
+    ]
 }
 
-resource "local_file" "my_local_file" {
-   filename = "./test.txt"
-   content  = "this is a test file"
+resource "null_resource" "invoke_ansible_playbook" {
+   # This will make sure the playbook is executed everytime
+   triggers = {
+      always_run = timestamp()
+   }
 
    provisioner "local-exec" {
+        environment = {
+           ANSIBLE_CONFIG ="${path.module}/ansible.cfg"
+	}
 	command = "ansible-playbook install-nginx-playbook.yml"
    }
+
+   depends_on = [
+       docker_container.my_ubuntu_container1,
+       docker_container.my_rocky_container1
+   ]
 }
