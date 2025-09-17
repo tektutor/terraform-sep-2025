@@ -14,6 +14,9 @@
   2. Terraform Enterprise ( Web console and it is a paid tool )
 </pre>
 
+## Info - Terraform High Level Architecture
+![Terraform](/terraform-architecture-diagram.png)
+
 ## Lab - Checking the Terraform version
 ```
 terraform --version
