@@ -149,3 +149,18 @@ docker images | grep ansible
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/563f4cc0-0f80-4f15-8bd7-5da6744845c6" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ab3eb630-be8b-4b24-8452-dcf9cc584e94" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e4670fad-4d4f-433a-bff1-e69c3339b340" />
+
+## Lab - Terraform Input and Output variables
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day3/terraform/provision-containers-with-input-and-output-variables
+terraform init
+terraform plan
+terraform apply --auto-approve
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1a393abc-7202-40a9-91f5-3f2027dacb7c" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b0a07e94-1e12-4e2e-9d33-a996824907f7" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/eb411c3d-06bd-4b31-affd-76bfb8058630" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/584e5581-6a7f-4afd-9336-e28ff8d8f293" />
