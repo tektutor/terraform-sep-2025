@@ -136,3 +136,16 @@ cat terraform.tfstate
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9485e8a2-e1ec-48ab-8205-301958b01a3f" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/81d0b87b-995e-4088-813e-d0843f2ab771" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9302c1b9-a41f-4c5d-ae72-ecd9c9c310d4" />
+
+Cleaning up the resources created by Terraform once you are done with using the resources
+```
+terraform destroy
+docker ps -a
+docker images | grep ansible
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fa23eaf4-4c9f-4b6d-9624-803dbd3b5067" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ca6a741f-7213-4bec-9a88-0c8c0bf9eed5" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/563f4cc0-0f80-4f15-8bd7-5da6744845c6" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ab3eb630-be8b-4b24-8452-dcf9cc584e94" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e4670fad-4d4f-433a-bff1-e69c3339b340" />
