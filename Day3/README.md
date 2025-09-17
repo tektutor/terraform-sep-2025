@@ -15,7 +15,7 @@
 </pre>
 
 ## Info - Terraform High Level Architecture
-![Terraform](/terraform-architecture-diagram.png)
+![Terraform](terraform-architecture-diagram.png)
 
 ## Lab - Checking the Terraform version
 ```
