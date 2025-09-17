@@ -185,6 +185,9 @@ cd ~/terraform-sep-2025
 git pull
 cd Day3/terraform/local-exec
 ls -l
+docker rm -f $(docker ps -aq)
+echo "" > ~/.ssh/known_hosts
+
 terraform init
 terraform plan
 terraform apply --auto-approve
