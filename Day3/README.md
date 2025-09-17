@@ -167,3 +167,53 @@ terraform apply --auto-approve
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d90af2a7-2c89-4611-b7b2-34fbd65c5914" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2c460ca7-5811-4807-ac54-a2bdbbbfef32" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a84bd256-0944-41c8-9760-4927bb0021b1" />
+
+You could change the container names in the inputs.tf file and perform terraform apply.  Terraform will replace the old containers with new containers with the updated container names.
+
+Once you are done, you may dispose the resources created by terraform
+```
+terraform destroy --auto-approve
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0ca90aa6-80bf-4560-9345-43ef7e87e12b" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3b2c1b5a-b7d3-4864-ad58-f391f83ca174" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/17dbaa36-c0b6-4054-8494-4f68ce16f038" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/05482fc0-d9d8-4d5a-96be-e974aacabc18" />
+
+## Lab - Invoking ansible playbook from Terraform using local-exec block
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day3/terraform/local-exec
+ls -l
+terraform init
+terraform plan
+terraform apply --auto-approve
+docker ps
+curl http://localhost:8001
+curl http://localhost:8002
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0007db8f-711b-4960-b387-c892e5ee8e63" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c0cfe5f6-6758-4a1a-a047-1efbf6d9af9f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6ac03136-efee-416e-9c93-fc05818870e2" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3bd5500c-a5eb-4eb0-8353-6ebc6a684643" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/dc4f281f-f66d-4b8b-8a57-ece94827cacb" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/621f1cc2-3494-4609-b246-dae0b189fbf0" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3c2f3e2e-0efc-4949-8636-20160e91bce7" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4f74f0b5-04de-499a-8c78-aba126dba763" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5be0f18d-df4f-43e5-85cb-2f64560e15a4" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/095348ad-3562-4b2f-9be5-3264076a9851" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1cd8e6e6-b64c-4738-89aa-ddfc55c32027" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8336085f-a9f9-4c79-8314-ea38187b53e3" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c80318f5-b3ca-4f71-8443-bf4fdcbd1adc" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/045d1261-3bd9-4e2b-a42f-711ccb14e216" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bdc34756-138a-4735-b63d-465cda2cc3f4" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4d459cf8-3389-471e-8471-1e6c2914e284" />
+
+Once you are done, you may dispose the resources
+```
+terraform destroy --auto-approve
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b292afbd-14ab-46d9-ad6b-bc25d4acbf1c" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f04457f9-6b03-4376-a764-9de486b6e69f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1f75f849-93ee-43c0-814d-413f0c589842" />
