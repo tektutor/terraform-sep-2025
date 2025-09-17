@@ -237,3 +237,27 @@ terraform apply --auto-approve
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b4c637b7-a775-4b27-8d48-42cf931eab65" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bc6c0f25-1630-4cbe-9513-13fb18706b27" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/38a0879e-6623-4392-bdfe-ba82ebfc42d7" />
+
+## Info - Common Terraform functions
+
+#### String Functions
+<pre>
+upper("abc") --> ABC
+lower("aBC") --> abc
+replace("staging.tektutor.org", "staging", "prod") --> prod.tektutor.org
+substr("terraform",0,4) --> terr
+length("abc") --> 3
+</pre>
+
+#### Numeric Functions
+<pre>
+min(4,10,3) -> 3
+max(2,20,3) --> 20
+ceil(4.2) --> 5
+floor(4.9) --> 4
+</pre>
+
+#### Collection Functions
+<pre>
+length([1,2,3]) --> 3  
+</pre>
