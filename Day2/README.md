@@ -132,6 +132,14 @@ kubectl get secret awx-tower-admin-password -n awx -o jsonpath='{.data.password}
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/72db3ac9-cad6-4c5a-bb20-74c407a60306" />
 <img width="1944" height="1193" alt="image" src="https://github.com/user-attachments/assets/3db70544-7db7-409f-a5e3-94bfc9e44e69" />
 
+## Lab - Creating a Project in Ansible Automation Platform (AWX)
+Navigate to your AWX Dashboard on your browser(preferably chrome)
+<img width="1944" height="1193" alt="image" src="https://github.com/user-attachments/assets/b60e0ef3-3eca-4f23-98c4-a64ded0240b1" />
+
+Navigate to Resources --> Project menu
+
+
+
 ## Info - SOLID Design Principles
 <pre>
 S - Single Responsibility Principle (SRP)
