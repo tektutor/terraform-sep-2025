@@ -126,9 +126,13 @@ Let's provision the containers using our Terraform manifest script
 ```
 cd ~/terraform-projects/ex1
 terraform apply
+ls -lha
+cat terraform.tfstate
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/50157606-f42b-44de-b433-6b0b7ab0e67d" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/25abb5ce-4ca0-467d-9160-c04455574ea5" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8d61dc26-c107-4e69-a4fc-a5abf780c8ed" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/44560ac6-08fa-41f3-af33-a4a1dd652775" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9485e8a2-e1ec-48ab-8205-301958b01a3f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/81d0b87b-995e-4088-813e-d0843f2ab771" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9302c1b9-a41f-4c5d-ae72-ecd9c9c310d4" />
