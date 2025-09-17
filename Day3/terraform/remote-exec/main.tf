@@ -67,7 +67,6 @@ resource "null_resource" "ubuntu_remote_execution" {
 
       timeout = "15s"  #wait upto 15s before attempting SSH
       agent   = false  
-
    }
 
    provisioner "remote-exec" {

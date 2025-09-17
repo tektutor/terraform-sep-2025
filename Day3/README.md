@@ -220,3 +220,20 @@ terraform destroy --auto-approve
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b292afbd-14ab-46d9-ad6b-bc25d4acbf1c" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f04457f9-6b03-4376-a764-9de486b6e69f" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1f75f849-93ee-43c0-814d-413f0c589842" />
+
+## Lab - Terraform - Running commands on the remote machine using remote-exec provisioner block
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day3/terraform/remote-exec
+terraform init
+terraform apply --auto-approve
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6901c010-b9b6-488b-b80c-bef39844a1aa" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ecf5b391-79ff-4890-8f2a-e72b5ec1b58b" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/783c95b7-6d71-423d-9cbc-d0e2092d3416" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8370ca0f-c50a-4a50-9014-69aa368cb8e2" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0552d89d-1b92-45db-82bb-11e208be7744" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b4c637b7-a775-4b27-8d48-42cf931eab65" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bc6c0f25-1630-4cbe-9513-13fb18706b27" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/38a0879e-6623-4392-bdfe-ba82ebfc42d7" />
