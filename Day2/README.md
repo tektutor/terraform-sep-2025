@@ -99,11 +99,14 @@ Apply
 ```
 kubectl apply -k .
 ```
+<img width="1944" height="1193" alt="image" src="https://github.com/user-attachments/assets/6254f755-5e90-4c28-bd5b-3786c583a69e" />
+<img width="1944" height="1193" alt="image" src="https://github.com/user-attachments/assets/17d20c4c-fd43-4834-8b3e-b0fd9e65952e" />
 
 Delete your awx-tower-task-xxyyzz and awx-tower-web-xxyyzz pod
 ```
 kubectl delete pod awx-tower-task-xxyyzz awx-tower-web-xxyyzz
 ```
+<img width="1944" height="1193" alt="image" src="https://github.com/user-attachments/assets/28596b2a-3377-47c3-847b-0fa89db962c5" />
 
 Wait until postgresdb upgrades to 15.0 and awx-tower-task and awx-tower-web pod turns to running state
 
@@ -123,9 +126,11 @@ Retrieve your admin password
 ```
 kubectl get secret awx-tower-admin-password -n awx -o jsonpath='{.data.password}' | base64 -d; echo
 ```
+<img width="1944" height="1193" alt="image" src="https://github.com/user-attachments/assets/c7883b06-1dec-4720-9291-4c793be90afd" />
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/54e7f522-e6b4-4fe4-ac93-d8e2fa6a861f" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/72db3ac9-cad6-4c5a-bb20-74c407a60306" />
+<img width="1944" height="1193" alt="image" src="https://github.com/user-attachments/assets/3db70544-7db7-409f-a5e3-94bfc9e44e69" />
 
 ## Info - SOLID Design Principles
 <pre>
