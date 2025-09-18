@@ -106,3 +106,36 @@ ls -1
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/94ef9bf9-305c-410e-b9da-6d55ff9e0f45" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b9edf707-f8d2-4e16-9ab7-87cc78305c97" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2951e11d-4e30-456a-addd-9240cc6de3a7" />
+
+## Lab - Developing a custom terraform provider plugin
+You need to crate folder
+```
+mkdir -p ~/go/bin
+touch ~/.terraformrc
+```
+Paste the below code in your ~/.terraformrc file
+<pre>
+provider_installation {
+  dev_overrides {
+      "registry.terraform.io/tektutor/file" = "/home/rps/go/bin",
+  }
+  direct {}
+}
+</pre>
+
+Then you may proceed with the below instruction
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day4/custom-terraform-providers/file
+tree
+
+go mod init github.com/tektutor/terraform-provider-file
+go mod tidy
+ls -l
+go build
+ls -l
+go install
+ls -l ~/go/bin
+```
+
