@@ -302,5 +302,21 @@ docker ps
   - Updates the state after applying
 - Types of State Storage
   - Local State - Stored in terraform.tfstate on your machine.
-  - Stored in a backend (e.g., AWS S3, Azure Blob, Google Cloud Storage, Terraform Cloud), needed when working in teams to avoid conflicts
+  - Stored in a backend (e.g., AWS S3, Azure Blob, Google Cloud Storage, Terraform Cloud), 
+    needed when working in teams to avoid conflicts
+</pre>
+
+## Info - Terraform State Locking
+<pre>
+- Prevents multiple terraform apply, terraform plan, or terraform destroy commands from running 
+  at the same time against the same state file
+- When two or more engineers update the same infrastructure at once, the state can become corrupted or inconsistent
+- How it works:
+  - When Terraform runs, it tries to acquire a lock on the state.
+  - When the state is already locked, Terraform waits until it’s released 
+- Supported backends:
+  - AWS S3 + DynamoDB (DynamoDB table is used for locks).
+  - Terraform Cloud / Enterprise (locking built-in).
+  - Consul (uses KV store for locking).
+  - Local state → no locking (risky for teams).
 </pre>
