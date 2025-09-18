@@ -166,3 +166,41 @@ terraform destroy --auto-approve
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/057462fd-1d69-4c99-9698-67a0fee9e9ea" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/712fd7fa-15cb-4359-bdc4-ac5d3475b33d" />
+
+## Lab - Implementing a Custom Docker Terraform Provider
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day4/custom-terraform-providers
+tree
+
+go mod init github.com/tektutor/terraform-provider-docker
+go mod tidy
+ls -l
+
+go build
+ls -l
+go install
+
+ls -l ~/go/bin
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/48e92371-cdd4-40aa-9327-5879bcbc4c3f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/646cdc1a-a021-4b7c-830e-17d738182ed6" />
+
+## Lab - Using our custom Docker Terraform Provider in Terraform manifest script
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day4/custom-terraform-providers/test-docker-custom-terraform-provider
+cat main.tf
+
+docker images | grep nginx
+docker ps
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/828906d6-a50f-4b9c-b4ae-397f99953a76" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/caea654a-d939-4237-8a8a-21dba80823b9" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/286e5eee-7816-4e90-ab0a-cc0654b49858" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4d782586-4f91-490a-93c6-58a9e47dda03" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a5c4e8d4-0049-4f28-9093-07fc1dbbf94f" />
