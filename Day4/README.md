@@ -9,14 +9,17 @@ terraform init
 ls -lha
 tree .terraform
 
+# Creates a new workspace named dev  
 terraform workspace new dev
 ls -lha
 tree terraform.tfstate.d
 
+# Creates a new workspace named stage  
 terraform workspace new stage
 ls -lha
 tree terraform.tfstate.d
 
+# Creates a new workspace named prod  
 terraform workspace new prod
 ls -lha
 tree terraform.tfstate.d
