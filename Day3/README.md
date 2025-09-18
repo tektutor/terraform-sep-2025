@@ -302,7 +302,7 @@ docker ps
   - Updates the state after applying
 - Types of State Storage
   - Local State - Stored in terraform.tfstate on your machine.
-  - Stored in a backend (e.g., AWS S3, Azure Blob, Google Cloud Storage, Terraform Cloud), 
+  - Remote State - Stored in a backend (e.g., AWS S3, Azure Blob, Google Cloud Storage, Terraform Cloud), 
     needed when working in teams to avoid conflicts
 </pre>
 
