@@ -281,5 +281,26 @@ docker ps
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b3bca78a-2243-4daf-ad42-d02270f46b19" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/67ce7435-3afe-4962-92da-5bedb4e142b9" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3bd78401-8f4e-43e7-a102-15d3453a45b8" />
-
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/434d53d5-6eed-4ea5-b130-3f0de747f4f4" />
+
+## Info - Understanding Terraform State Management
+<pre>
+- Terraform keeps track of the real-world resources it manages (VMs, databases, networks, etc.) using a state file
+- By default, this file is called terraform.tfstate and is stored locally in your working directory
+- It acts as a map between your Terraform configuration (.tf files) and the actual infrastructure
+- Mapping resources 
+  – Terraform knows which resource in the cloud corresponds to which resource block in your config
+- Performance 
+  – Instead of querying the cloud provider every time, Terraform uses the state file to quickly know the existing resources
+- Dependency tracking 
+  – Terraform builds a dependency graph using state to decide the order of creating, updating, or destroying resources
+- When you run terraform apply, Terraform:
+  - Reads the current state (terraform.tfstate).
+  - Compares it with your configuration (.tf files).
+  - Checks the real-world resources via the provider (AWS, Azure, etc.).
+  - Plans changes (what to add, modify, destroy).
+  - Updates the state after applying
+- Types of State Storage
+  - Local State - Stored in terraform.tfstate on your machine.
+  - Stored in a backend (e.g., AWS S3, Azure Blob, Google Cloud Storage, Terraform Cloud), needed when working in teams to avoid conflicts
+</pre>
