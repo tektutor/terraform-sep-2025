@@ -99,3 +99,10 @@ tree terraform.tfstate.d
 ls -1  
 </pre>
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c1673928-7e97-48dd-ac17-b96d5b6a73f7" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6b2a9d01-8509-4a09-b167-e292d81515fe" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/89de6300-3770-4e02-8fc3-55a9cb7a9a77" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/53744f89-941f-47bf-9d03-0696eb9c695e" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/287d0774-c174-4367-9d2f-16f655a91b86" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/94ef9bf9-305c-410e-b9da-6d55ff9e0f45" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b9edf707-f8d2-4e16-9ab7-87cc78305c97" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2951e11d-4e30-456a-addd-9240cc6de3a7" />
