@@ -106,3 +106,63 @@ ls -1
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/94ef9bf9-305c-410e-b9da-6d55ff9e0f45" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b9edf707-f8d2-4e16-9ab7-87cc78305c97" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2951e11d-4e30-456a-addd-9240cc6de3a7" />
+
+## Lab - Developing a custom terraform provider plugin
+You need to crate folder
+```
+mkdir -p ~/go/bin
+touch ~/.terraformrc
+```
+Paste the below code in your ~/.terraformrc file
+<pre>
+provider_installation {
+  dev_overrides {
+      "registry.terraform.io/tektutor/file" = "/home/rps/go/bin",
+  }
+  direct {}
+}
+</pre>
+
+Then you may proceed with the below instruction
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day4/custom-terraform-providers/file
+tree
+
+go mod init github.com/tektutor/terraform-provider-file
+go mod tidy
+ls -l
+go build
+ls -l
+go install
+ls -l ~/go/bin
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bc905044-9664-4a51-9392-c0ec30ace199" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ac7b59a2-5c70-47eb-82d7-5190188364a7" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a99e8a43-2172-4011-a099-84391e533d9f" />
+
+## Lab - Using our custom terraform file provider in our Terraform project
+```
+cd ~/terraform-sep-2025
+git pull
+cd Day4/custom-terraform-providers/test-file-custom-terraform-provider
+ls -l
+terraform plan
+terraform apply --auto-approve
+ls -l
+cat 
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a33c321d-13d9-4d1f-baad-39f74014abcb" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4c6373a8-1ef1-491e-8126-e4fa1c1088f4" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fb0b3a99-63c1-431c-87e5-a44a5c351016" />
+
+Once you are done, you may dispose the resources created by Terraform
+```
+terraform destroy --auto-approve
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/057462fd-1d69-4c99-9698-67a0fee9e9ea" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/712fd7fa-15cb-4359-bdc4-ac5d3475b33d" />
