@@ -320,3 +320,28 @@ docker ps
   - Consul (uses KV store for locking).
   - Local state → no locking (risky for teams).
 </pre>
+
+## Info - Team Workspaces
+<pre>
+- a feature that allow you to manage multiple states within the same Terraform configuration
+- is especially useful when you want to reuse the same code for different environments (e.g., dev, stage, prod) 
+  without duplicating the configuration files
+- Default Workspace
+  - Every Terraform project starts with a workspace named default.
+  - If you don’t explicitly create or select a workspace, Terraform uses default
+- Workspace = Separate State File
+  - Each workspace has its own state file.
+   - Same configuration, but resources are tracked separately for each workspace.
+   - Naming Convention
+   - Workspace name can be used to distinguish environments, like:
+     - dev
+     - staging
+     - prod
+- commands
+  - terraform workspace show
+  - terraform workspace list
+  - terraform workspace new dev
+  - terraform workspace select dev
+  - terraform workspace delete dev
+
+</pre>
