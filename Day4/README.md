@@ -86,7 +86,7 @@ tree terraform.tfstate.d
 
 terraform workspace show
 terraform workspace list
-terraform workspace select stage
+terraform workspace select staging
 terraform apply --auto-approve
 tree terraform.tfstate.d
 
@@ -98,3 +98,4 @@ tree terraform.tfstate.d
 
 ls -1  
 </pre>
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c1673928-7e97-48dd-ac17-b96d5b6a73f7" />
