@@ -281,5 +281,67 @@ docker ps
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b3bca78a-2243-4daf-ad42-d02270f46b19" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/67ce7435-3afe-4962-92da-5bedb4e142b9" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3bd78401-8f4e-43e7-a102-15d3453a45b8" />
-
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/434d53d5-6eed-4ea5-b130-3f0de747f4f4" />
+
+## Info - Understanding Terraform State Management
+<pre>
+- Terraform keeps track of the real-world resources it manages (VMs, databases, networks, etc.) using a state file
+- By default, this file is called terraform.tfstate and is stored locally in your working directory
+- It acts as a map between your Terraform configuration (.tf files) and the actual infrastructure
+- Mapping resources 
+  – Terraform knows which resource in the cloud corresponds to which resource block in your config
+- Performance 
+  – Instead of querying the cloud provider every time, Terraform uses the state file to quickly know the existing resources
+- Dependency tracking 
+  – Terraform builds a dependency graph using state to decide the order of creating, updating, or destroying resources
+- When you run terraform apply, Terraform:
+  - Reads the current state (terraform.tfstate).
+  - Compares it with your configuration (.tf files).
+  - Checks the real-world resources via the provider (AWS, Azure, etc.).
+  - Plans changes (what to add, modify, destroy).
+  - Updates the state after applying
+- Types of State Storage
+  - Local State - Stored in terraform.tfstate on your machine.
+  - Remote State - Stored in a backend (e.g., AWS S3, Azure Blob, Google Cloud Storage, Terraform Cloud), 
+    needed when working in teams to avoid conflicts
+</pre>
+
+## Info - Terraform State Locking
+<pre>
+- Prevents multiple terraform apply, terraform plan, or terraform destroy commands from running 
+  at the same time against the same state file
+- When two or more engineers update the same infrastructure at once, the state can become corrupted or inconsistent
+- How it works:
+  - When Terraform runs, it tries to acquire a lock on the state.
+  - When the state is already locked, Terraform waits until it’s released 
+- Supported backends:
+  - AWS S3 + DynamoDB (DynamoDB table is used for locks).
+  - Terraform Cloud / Enterprise (locking built-in).
+  - Consul (uses KV store for locking).
+  - Local state → no locking (risky for teams).
+</pre>
+
+## Info - Team Workspaces
+<pre>
+- a feature that allow you to manage multiple states within the same Terraform configuration
+- is especially useful when you want to reuse the same code for different environments (e.g., dev, stage, prod) 
+  without duplicating the configuration files
+- Default Workspace
+  - Every Terraform project starts with a workspace named default.
+  - If you don’t explicitly create or select a workspace, Terraform uses default
+- Workspace = Separate State File
+  - Each workspace has its own state file.
+   - Same configuration, but resources are tracked separately for each workspace.
+   - Naming Convention
+   - Workspace name can be used to distinguish environments, like:
+     - dev
+     - staging
+     - prod
+- commands
+  - terraform workspace show
+  - terraform workspace list
+  - terraform workspace new dev
+  - terraform workspace select dev
+  - terraform workspace delete dev
+
+</pre>
