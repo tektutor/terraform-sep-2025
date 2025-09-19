@@ -250,3 +250,7 @@ Cick "Save and Finish"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/81ee3fd5-9da7-4726-9b32-bfb23dee1247" />
 Click "Start using Jenkins"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/455b0d39-43f7-4b14-956b-dba848fe9d51" />
+
+# Info - CI/CD
+<img width="2906" height="1550" alt="image" src="https://github.com/user-attachments/assets/479d9886-83db-41bf-ac3e-45f91c459825" />
+
