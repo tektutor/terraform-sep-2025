@@ -22,13 +22,11 @@ func resourceDockerContainer() *schema.Resource {
 		DeleteContext: resourceDeleteDockerContainer,
 
 		Schema: map[string]*schema.Schema {
-
 			"container_name": {
 				Description: "Name of the container",
 				Type       : schema.TypeString,
 				Required   : true,
 			},
-
 			"host_name": {
                              Description: "Hostname of the container.",
 			     Type : schema.TypeString,
