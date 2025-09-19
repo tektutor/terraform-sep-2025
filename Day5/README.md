@@ -272,3 +272,13 @@ General section, Description
 CI/CD Job, polls TekTutor training repository and triggers terraform provisioning on code commit.
 </pre>
 
+Under Sourc Code Management section, select Git
+<pre>
+Repository URL - http://github.com/tektutor/terraform-sep-2025.git
+Branch Specifier - */main
+</pre>
+
+Under Triggers section, select Poll SCM option
+<pre>
+Schedule - H/02 * * * *
+</pre>
