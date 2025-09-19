@@ -267,5 +267,8 @@ Select "Freestyle project"
 Click "Ok"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/aba0d2e9-6f57-4f41-aba2-b483c40a1214" />
 
-General section, Description "CI/CD Job, polls TekTutor training repository and triggers terraform provisioning on code commit."
+General section, Description 
+<pre>
+CI/CD Job, polls TekTutor training repository and triggers terraform provisioning on code commit.
+</pre>
 
