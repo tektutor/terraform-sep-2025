@@ -291,3 +291,10 @@ cd Day5/CICD/local-exec
 terraform init
 terraform apply --auto-approve
 </pre>
+
+Make sure, on your system you delete the existing containers
+```
+docker rm -f ubuntu1 ubuntu2 rocky1 rocky2
+```
+
+Click "Save" and wait for the CI/CD build to happen automatically.
