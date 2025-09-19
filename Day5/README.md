@@ -271,17 +271,22 @@ General section, Description
 <pre>
 CI/CD Job, polls TekTutor training repository and triggers terraform provisioning on code commit.
 </pre>
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8737f606-87c6-4958-8027-4e9da9e3707b" />
 
-Under Sourc Code Management section, select Git
+
+
+Under Source Code Management section, select Git
 <pre>
 Repository URL - http://github.com/tektutor/terraform-sep-2025.git
 Branch Specifier - */main
 </pre>
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6a7c6881-f698-46a9-866a-a0101ba34b94" />
 
 Under Triggers section, select Poll SCM option
 <pre>
 Schedule - H/02 * * * *
 </pre>
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d1141ab4-441d-4fdb-835d-23b00fc2d4af" />
 
 Under Build Steps, Select "Add Build Steps" and choose "Execute Shell"
 <pre>
@@ -291,10 +296,18 @@ cd Day5/CICD/local-exec
 terraform init
 terraform apply --auto-approve
 </pre>
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a8c91fb3-85ed-4629-89df-50130002902b" />
 
 Make sure, on your system you delete the existing containers
 ```
 docker rm -f ubuntu1 ubuntu2 rocky1 rocky2
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9bdc9745-7d1a-4e9c-b8d2-11f0e0ccf860" />
 
 Click "Save" and wait for the CI/CD build to happen automatically.
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/dc678cb7-11a2-4013-9587-1849aed10f22" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ec71d7d0-c8e2-4404-be05-198ad573fc96" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/69e1eab7-b8e6-441f-ad72-70a3aede96e2" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f7b84934-2995-48eb-b65a-a58cc829f641" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/95001d25-e10a-4185-8ece-54c626df3f14" />
