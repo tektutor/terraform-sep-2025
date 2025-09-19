@@ -254,3 +254,14 @@ Click "Start using Jenkins"
 # Info - CI/CD
 <img width="2906" height="1550" alt="image" src="https://github.com/user-attachments/assets/479d9886-83db-41bf-ac3e-45f91c459825" />
 
+
+## Lab - Creating a CI/CD Job in Jenkins
+
+Navigate to your Jenkins Dashboard
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/341a5d44-2b3f-4899-983d-4ddaaa093594" />
+
+Click "Create a Job"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d4ac22a7-dc39-491e-a6bb-a250e073bee4" />
+Select "Freestyle project"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1530be1f-cf10-4229-bf43-4f759cda31bb" />
+
