@@ -282,3 +282,12 @@ Under Triggers section, select Poll SCM option
 <pre>
 Schedule - H/02 * * * *
 </pre>
+
+Under Build Steps, Select "Add Build Steps" and choose "Execute Shell"
+<pre>
+Under Command
+  
+cd Day5/CICD/local-exec
+terraform init
+terraform apply --auto-approve
+</pre>
