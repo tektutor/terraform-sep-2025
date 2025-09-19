@@ -197,3 +197,18 @@ To run the playbook, click "Launch" Button
 ![image](img73.png)
 ![image](img74.png)
 ![image](img75.png)
+
+## Info - Jenkins
+<pre>
+- is a CI/CD Build Server
+- developed by Josuke Kavaguchi, a former employee of Sun Microsystems
+- initially this tool was called as Hudson, when originally it was developed in Java by Josuke Kavaguchi
+- Josuke started a company called Cloudbees, forked the Hudson branch as Jenkins
+- Jenkins opensource project today has got more than 10000 active opensource contributors
+</pre>
+
+## Lab - Downloading Jenkins
+<pre>
+cd ~
+wget https://get.jenkins.io/war-stable/2.516.3/jenkins.war  
+</pre>
