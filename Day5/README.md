@@ -233,3 +233,20 @@ You can access your jenkins from chrome browse on the lab machine
 http://localhost:8080
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/7944e0a8-c004-4c8c-864f-a7019897f83d" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d95c251d-bb80-4cb6-b702-3049c0c58132" />
+Click Continue
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ef1b80a0-062d-434a-85a9-b5883670acd8" />
+Select "Install suggested Plugins"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/64180c2b-0959-46e0-88e4-43bf54074152" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f95189a9-56db-4f74-bded-6ca5fafb284f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f9892b64-2886-4c24-ae1d-b12f1d3656c7" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/41127de6-2ebd-47bc-8441-f15d2889a6ed" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f13035ee-6aa0-47fb-9db9-0d51cbe40301" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/820bd8e9-39ff-44d0-b554-6678a6434c9e" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a081188e-e920-44ac-89bc-e16dcd7d161f" />
+Click "Save and Continue"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ef25bb16-3f71-43c0-9583-02f800a6b053" />
+Cick "Save and Finish"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/81ee3fd5-9da7-4726-9b32-bfb23dee1247" />
+Click "Start using Jenkins"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/455b0d39-43f7-4b14-956b-dba848fe9d51" />
