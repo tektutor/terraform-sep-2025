@@ -214,6 +214,12 @@ cd ~
 wget https://get.jenkins.io/war-stable/2.516.3/jenkins.war  
 </pre>
 
+Install JDK
+```
+sudo apt install -y openjdk-21-jre-headless
+```
+
+
 Launching Jenkins
 <pre>
 cd ~
