@@ -264,4 +264,8 @@ Click "Create a Job"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d4ac22a7-dc39-491e-a6bb-a250e073bee4" />
 Select "Freestyle project"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1530be1f-cf10-4229-bf43-4f759cda31bb" />
+Click "Ok"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/aba0d2e9-6f57-4f41-aba2-b483c40a1214" />
+
+General section, Description "CI/CD Job, polls TekTutor training repository and triggers terraform provisioning on code commit."
 
