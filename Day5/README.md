@@ -207,8 +207,24 @@ To run the playbook, click "Launch" Button
 - Jenkins opensource project today has got more than 10000 active opensource contributors
 </pre>
 
-## Lab - Downloading Jenkins
+## Lab - Setup Jenkins
+Download jenkins from command-line
 <pre>
 cd ~
 wget https://get.jenkins.io/war-stable/2.516.3/jenkins.war  
 </pre>
+
+Launching Jenkins
+<pre>
+cd ~
+java -jar ./jenkins.war  
+</pre>
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/783c7472-6d36-402e-bcdd-d84ee81bb544" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/39377a72-10c6-4f86-9804-dd96ccd2cf8e" />
+
+You can access your jenkins from chrome browse on the lab machine 
+```
+http://localhost:8080
+```
+
+![Uploading image.png…]()
