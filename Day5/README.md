@@ -226,5 +226,4 @@ You can access your jenkins from chrome browse on the lab machine
 ```
 http://localhost:8080
 ```
-
-![Uploading image.png…]()
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/7944e0a8-c004-4c8c-864f-a7019897f83d" />
